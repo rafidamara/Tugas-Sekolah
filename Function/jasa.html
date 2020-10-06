@@ -3,9 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jasa Cukur Rambut</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <style>
+        .container {
+            width: 920px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <fieldset style="width: 450px; float: right; margin-right: 300px; margin-top: 40px;">
+        <strong style="float: right; margin-right: 300px;">List Harga Lapangan</strong>
+        <br>
+        <ul style="float: right; margin-right: 200px;">
+            <li>Lapangan Futsal 1 (OutDoor) 45000/jam</li>
+            <li>Lapangan Futsal 2 (InDoor) 60000/jam</li>
+            <li>Lapangan Bulutangkis 40000/jam</li><hr>
+            <p style="text-align: justify;">Jika menyewa lebih dari 2 jam maka akan mendapatkan diskon 10% dari harga awal masing masing Lapangan.</p>
+        </ul>
+        </fieldset>
+        <br>
+    <div class="container">
+        <form name="forminput">
+            <div class="form-group">
+                <div class="row">
+
+                    <!-- BAG INPUT! -->
+                    <div class="col-sm">
+                        <div class="card text-white">
+                            <h5 class="card-header bg-dark">Form Input</h5>
+                            <div class="card-body">
+                                <table class="table table-borderless">
+                                    <tr>
+                                        <td>Kode jasa:</td>
+                                        <td>
+                                            <select name="inputkodejasa" class="form-control" onclick="combo()">
+                                                <option></option>
+                                                <option selected>Pilih Kode</option>
+                                                <option value="eda13">130</option>
+                                                <option value="eda14">104</option>
+                                                <option value="eda15">535</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Nama Pelanggan:</td>
+                                        <td><input class="form-control" type="text" name="inputnamapelanggan" placeholder="Masukkan Nama Anda"></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Model Cukur:</td>
+                                        <td><input class="form-control" type="text" name="inputmodelcukur" placeholder="">
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Harga Satuan:</td>
+                                        <td><input class="form-control" type="text" name="inputhargasatuan">
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Jumlah Pelanggan:</td>
+                                        <td><input class="form-control" type="number" name="inputjumlahpelanggan" placeholder="Masukkan Angka">
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Tanggal Cukur:</td>
+                                        <td><input class="form-control" type="date" name="inputtanggalcukur">
+                                    </tr>
+
+                                    <td colspan="2">
+                                        <input type="button" class="form-control btn-outline-dark" value="Total"
+                                            onclick="hitungtotal()">
+                                    </td>
+
+                                    <tr>
+                                        <td>Total:</td>
+                                        <td><input class="form-control" type="text" name="inputtotal"></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Bayar:</td>
+                                        <td><input class="form-control" type="text" name="inputbayar"></td>
+                                    </tr>
+
+                                    <td colspan="2">
+                                        <input class="form-control btn-outline-dark" type="button" value="Bayar"
+                                            onclick="hitungsisauang()">
+                                    </td>
+
+                                    <tr>
+                                        <td><label>Sisa Uang:</label></td>
+                                        <td><input class="form-control" type="text" name="inputsisauang">
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td colspan="2">
+                                            <div class="row">
+                                                <div class="col-sm">
+                                                    <input class="form-control btn-outline-success" type="button"
+                                                        value="Beli" onclick="simpan()"><br>
+                                                </div>
+                                                <div class="col-sm">
+                                                    <input class="form-control btn-outline-danger" type="reset"
+                                                        value="Batal">
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- BAG OUTPUT! -->
+                    <div class="col-sm">
+                        <div class="card text-white">
+                            <h5 class="card-header bg-dark">Output</h5>
+                            <div class="card-body">
+                                <table class="table table-borderless">
+                                    <tr>
+                                        <td>Nama Pelanggan</td>
+                                        <td><input class="form-control" type="text" name="onamapelanggan"></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Model Cukur</td>
+                                        <td><output class="form-control" type="text" name="omodelcukur"></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Jumlah Pelanggan</td>
+                                        <td><output class="form-control" type="text" name="ojumlahpelanggan"></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Total</td>
+                                        <td><output class="form-control" type="text" name="ototal"></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Dibayar</td>
+                                        <td><output class="form-control" type="text" name="odibayar"></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Sisa Uang</td>
+                                        <td><output class="form-control" type="text" name="osisauang"></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Tanggal Cukur:</td>
+                                        <td><input class="form-control" type="text" name="oinputtanggalcukur">
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function combo() {
+            var kodejasa = (document.forminput.inputkodejasa.value);
+            var modelcukur = "";
+            var hargajasa = 0.0;
+
+            if (kodejasa == "eda13") {
+                modelcukur = "Botak";
+                hargajasa = 25000;
+            } else if (kodejasa == "eda14") {
+                modelcukur = "Pinggiran Aja";
+                hargajasa = 15000;
+            } else if (kodejasa == "eda15") {
+                modelcukur = "Sesuai Selera";
+                hargajasa = 20000;
+            } else {
+                modelcukur = "";
+                hargajasa = 0;
+            }
+
+            document.forminput.inputmodelcukur.value = modelcukur;
+            document.forminput.inputhargasatuan.value = eval(hargajasa);
+        }
+
+        function hitungtotal() {
+            var hargajasa = (document.forminput.inputhargasatuan.value);
+            var jumlahpelanggan = (document.forminput.inputjumlahpelanggan.value);
+            var total = 0.0;
+
+            total = hargajasa * jumlahpelanggan;
+
+            document.forminput.inputtotal.value = eval(total);
+        }
+
+        function hitungsisauang() {
+            var total = (document.forminput.inputtotal.value);
+            var uangbayar = (document.forminput.inputbayar.value);
+            var sisauang = 0.0;
+
+            sisauang = uangbayar - total;
+
+            document.forminput.inputsisauang.value = eval(sisauang);
+        }
+
+        function simpan() {
+            document.forminput.onamapelanggan.value = document.forminput.inputnamapelanggan.value;
+            document.forminput.omodelcukur.value = document.forminput.inputmodelcukur.value;
+            document.forminput.ojumlahpelanggan.value = document.forminput.inputjumlahpelanggan.value;
+            document.forminput.ototal.value = document.forminput.inputtotal.value;
+            document.forminput.odibayar.value = document.forminput.inputbayar.value;
+            document.forminput.osisauang.value = document.forminput.inputsisauang.value;
+            document.forminput.otanggalcukur.value = document.forminput.inputtanggalcukur.value;
+        }
+    </script>
 </body>
+
 </html>
