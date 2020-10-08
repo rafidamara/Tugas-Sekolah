@@ -1,225 +1,425 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jasa Cukur Rambut</title>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <style>
-        .container {
-            width: 920px;
-            margin-top: 40px;
-        }
-    </style>
-</head>
-<body>
-    <br><br>
-    <center><h1><strong>PANGKAS RAMBUT</strong></h1></center>
-    <center><h3><i>-STARBAK-</i></h3></center>
-    <div class="container">
-        <form name="forminput">
-            <div class="form-group">
-                <div class="row">
+    <title>Villa Surga</title>
+  </head>
+  <body>
+    <!-- navbar nya -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#header">Home <span class="sr-only">(current)</span></a>    
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Form">Pemesanan</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" href="#Hasil">Transaksi</a>
+          </li> 
+        </ul>
+      </div>
+    </nav>
 
-                    <!-- BAG INPUT! -->
-                    <div class="col-sm">
-                        <div class="card text-white">
-                            <h5 class="card-header bg-dark"><center>Form Input</center></h5>
-                            <div class="card-body">
-                                <table class="table table-borderless">
-                                    <tr>
-                                        <td>Kode jasa:</td>
-                                        <td>
-                                            <select name="inputkodejasa" class="form-control" onclick="combo()">
-                                                <option></option>
-                                                <option selected>Pilih Kode</option>
-                                                <option value="eda13">130</option>
-                                                <option value="eda14">104</option>
-                                                <option value="eda15">535</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Nama Pelanggan:</td>
-                                        <td><input class="form-control" type="text" name="inputnamapelanggan" placeholder="Masukkan Nama Anda"></td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Model Cukur:</td>
-                                        <td><input class="form-control" type="text" name="inputmodelcukur" placeholder="">
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Harga Satuan:</td>
-                                        <td><input class="form-control" type="text" name="inputhargasatuan">
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Jumlah Pelanggan:</td>
-                                        <td><input class="form-control" type="number" name="inputjumlahpelanggan" placeholder="Masukkan Angka">
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Tanggal Cukur:</td>
-                                        <td><input class="form-control" type="date" name="inputtanggalcukur">
-                                    </tr>
-
-                                    <td colspan="2">
-                                        <input type="button" class="form-control btn-outline-dark" value="Total"
-                                            onclick="hitungtotal()">
-                                    </td>
-
-                                    <tr>
-                                        <td>Total:</td>
-                                        <td><input class="form-control" type="text" name="inputtotal"></td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Bayar:</td>
-                                        <td><input class="form-control" type="text" name="inputbayar"></td>
-                                    </tr>
-
-                                    <td colspan="2">
-                                        <input class="form-control btn-outline-dark" type="button" value="Bayar"
-                                            onclick="hitungsisauang()">
-                                    </td>
-
-                                    <tr>
-                                        <td><label>Sisa Uang:</label></td>
-                                        <td><input class="form-control" type="text" name="inputsisauang">
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td colspan="2">
-                                            <div class="row">
-                                                <div class="col-sm">
-                                                    <input class="form-control btn-outline-success" type="button"
-                                                        value="Beli" onclick="simpan()"><br>
-                                                </div>
-                                                <div class="col-sm">
-                                                    <input class="form-control btn-outline-danger" type="reset"
-                                                        value="Batal">
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- BAG OUTPUT! -->
-                    <div class="col-sm">
-                        <div class="card text-white">
-                            <h5 class="card-header bg-dark"><center>Output</center></h5>
-                            <div class="card-body">
-                                <table class="table table-borderless">
-                                    <tr>
-                                        <td>Nama Pelanggan</td>
-                                        <td><input class="form-control" type="text" name="onamapelanggan"></td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Model Cukur</td>
-                                        <td><output class="form-control" type="text" name="omodelcukur"></td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Jumlah Pelanggan</td>
-                                        <td><output class="form-control" type="text" name="ojumlahpelanggan"></td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Total</td>
-                                        <td><output class="form-control" type="text" name="ototal"></td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Dibayar</td>
-                                        <td><output class="form-control" type="text" name="odibayar"></td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Sisa Uang</td>
-                                        <td><output class="form-control" type="text" name="osisauang"></td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Tanggal Cukur:</td>
-                                        <td><input class="form-control" type="text" name="oinputtanggalcukur">
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
+  <!-- carousel nya -->
+  <br id="header">
+  <div id="carouselExampleCaptions" class="carousel slide " data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://cdn.travelio.id/hotel/314bb-59155cce6826964324cdc12b/PicsArt-03-31-07-20-07_l.jpg" height="800" class="d-block w-100" alt="...">
+        <br>
+        <div class="carousel-caption d-none d-md-block"> 
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://apollo-singapore.akamaized.net/v1/files/cyvbv3pqwxgb-ID/image;s=850x0" height="800" class="d-block w-100" alt="...">
+        <br>
+        <div class="carousel-caption d-none d-md-block">  
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/67781456-930276a2e22c48bd54ac8ff5ceaa8e16.jpeg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit" height="800" class="d-block w-100" alt="...">
+        <br>
+        <div class="carousel-caption d-none d-md-block">  
+        </div>
+      </div>
     </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only icon-dark">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  
+  <br id="Form">
+  <div class="p-3 mb-3 bg-secondary text-white shadow-sm">
+      <h5 class="display-4" style="text-align: center; Cochin, Georgia, Times, font-family: Cambria, 'Times New Roman', serif;">Villa Surga</h5>
+    </div>
+  <br><br>
 
-    <script>
-        function combo() {
-            var kodejasa = (document.forminput.inputkodejasa.value);
-            var modelcukur = "";
-            var hargajasa = 0.0;
+  <div class="container">
+      <form name="forminput">
+          <div class="form-group">
+              <div class="row">
 
-            if (kodejasa == "eda13") {
-                modelcukur = "Botak";
-                hargajasa = 25000;
-            } else if (kodejasa == "eda14") {
-                modelcukur = "Pinggiran Aja";
-                hargajasa = 15000;
-            } else if (kodejasa == "eda15") {
-                modelcukur = "Sesuai Selera";
-                hargajasa = 20000;
-            } else {
-                modelcukur = "";
-                hargajasa = 0;
-            }
+                  <!-- BAG INPUT! -->
+                  <div class="col-sm">
+                      <div class="card text-white">
+                          <h5 class="card-header bg-dark"><center>Form Pemesanan</center></h5>
+                          <div class="card-body">
+                              <div class="shadow-sm p-3 mb-7 bg-light rounded" style="float: left; margin-left: 5px; width: 500px;">
+                                  <table class="table table-borderless">
+                                      <tr>
+                                          <td>Kode Villa:</td>
+                                          <td>
+                                              <select name="inputkode" class="form-control" onclick="combo()">
+                                                  <option></option>
+                                                  <option selected>Pilih Kode</option>
+                                                  <option value="eda13">00801</option>
+                                                  <option value="eda14">00901</option>
+                                                  <option value="eda15">01001</option>
+                                              </select>
+                                          </td>
+                                      </tr>
 
-            document.forminput.inputmodelcukur.value = modelcukur;
-            document.forminput.inputhargasatuan.value = eval(hargajasa);
-        }
+                                      <tr>
+                                          <td>Nama Pelanggan:</td>
+                                          <td><input class="form-control" type="text" name="inputnama" placeholder="Masukkan Nama Anda"></td>
+                                      </tr>
 
-        function hitungtotal() {
-            var hargajasa = (document.forminput.inputhargasatuan.value);
-            var jumlahpelanggan = (document.forminput.inputjumlahpelanggan.value);
-            var total = 0.0;
+                                      <tr>
+                                          <td>Model Villa:</td>
+                                          <td><input class="form-control" type="text" name="inputmodel" placeholder="">
+                                          </td>
+                                      </tr>
 
-            total = hargajasa * jumlahpelanggan;
+                                      <tr>
+                                          <td>Harga Satuan:</td>
+                                          <td><input class="form-control" type="text" name="inputharga">
+                                          </td>
+                                      </tr>
 
-            document.forminput.inputtotal.value = eval(total);
-        }
+                                      <tr>
+                                          <td>Jumlah Pemesanan:</td>
+                                          <td><input class="form-control" type="number" name="inputjumlah" placeholder="Masukkan Angka">
+                                          </td>
+                                      </tr>
 
-        function hitungsisauang() {
-            var total = (document.forminput.inputtotal.value);
-            var uangbayar = (document.forminput.inputbayar.value);
-            var sisauang = 0.0;
+                                      <td colspan="2">
+                                          <input type="button" class="form-control btn-outline-dark" value="Konfirmasi"
+                                          onclick="hitungtotal()">
+                                      </td>
 
-            sisauang = uangbayar - total;
+                                      <tr>
+                                          <td>Total:</td>
+                                          <td><input class="form-control" type="text" name="inputtotal"></td>
+                                      </tr>
 
-            document.forminput.inputsisauang.value = eval(sisauang);
-        }
+                                      <tr>
+                                          <td>Bayar:</td>
+                                          <td><input class="form-control" type="text" name="inputbayar" placeholder="Nominal Uang"></td>
+                                      </tr>
 
-        function simpan() {
-            document.forminput.onamapelanggan.value = document.forminput.inputnamapelanggan.value;
-            document.forminput.omodelcukur.value = document.forminput.inputmodelcukur.value;
-            document.forminput.ojumlahpelanggan.value = document.forminput.inputjumlahpelanggan.value;
-            document.forminput.ototal.value = document.forminput.inputtotal.value;
-            document.forminput.odibayar.value = document.forminput.inputbayar.value;
-            document.forminput.osisauang.value = document.forminput.inputsisauang.value;
-            document.forminput.otanggalcukur.value = document.forminput.inputtanggalcukur.value;
-        }
-    </script>
-</body>
+                                      <td colspan="2">
+                                          <input class="form-control btn-outline-dark" type="button" value="Bayar"
+                                          onclick="hitungsisauang()">
+                                      </td>
 
+                                      <tr>
+                                          <td><label>Sisa Uang:</label></td>
+                                          <td><input class="form-control" type="text" name="inputsisauang">
+                                          </td>
+                                      </tr>
+
+                                      <tr>
+                                          <td colspan="2">
+                                              <div class="row">
+                                                  <div class="col-sm">
+                                                      <input class="form-control btn-outline-success" type="button"
+                                                          value="Beli" onclick="simpan()"><br>
+                                                  </div>
+                                                  <div class="col-sm">
+                                                      <input class="form-control btn-outline-danger" type="reset"
+                                                          value="Batal">
+                                                  </div>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+
+                  <!-- BAG OUTPUT! -->
+                  <div class="col-sm">
+                      <div class="card text-white">
+                          <h5 class="card-header bg-dark"><center>Form Transaksi</center></h5>
+                          <div class="card-body">
+                              <div class="shadow-sm p-2 mb-7 bg-light rounded" style="float: left; margin-left: 45px; width: 400px;">
+                                  <table class="table table-borderless">
+                                      <tr>
+                                          <td>Nama Pelanggan</td>
+                                          <td><input class="form-control" type="text" name="onama"></td>
+                                      </tr>
+
+                                      <tr>
+                                          <td>Model Villa</td>
+                                          <td><output class="form-control" type="text" name="omodel"></td>
+                                      </tr>
+
+                                      <tr>
+                                          <td>Jumlah Pemesanan</td>
+                                          <td><output class="form-control" type="text" name="ojumlah"></td>
+                                      </tr>
+
+                                      <tr>
+                                          <td>Total</td>
+                                          <td><output class="form-control" type="text" name="ototal"></td>
+                                      </tr>
+
+                                      <tr>
+                                          <td>Dibayar</td>
+                                          <td><output class="form-control" type="text" name="odibayar"></td>
+                                      </tr>
+
+                                      <tr>
+                                          <td>Sisa Uang</td>
+                                          <td><output class="form-control" type="text" name="osisauang"></td>
+                                      </tr>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-sm">
+                    <div class="card text-white">
+                        <h5 class="card-header bg-dark"><center>Form Konfirmasi</center></h5>
+                        <div class="card-body">
+                            <div class="shadow-sm p-2 mb-7 bg-light rounded" style="float: left; margin-left: 45px; width: 980px;">
+                                <table class="table table-borderless">
+                                    <div class="form-group row ">
+                                        <label for="namaa" class="col-sm-2 col-form-label">Nama Pelanggan</label>
+                                        <div class="col-sm-4">
+                                          <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama Pelanggan" style="width: 350px;">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="modell" class="col-sm-2 col-form-label">Model Villa</label>
+                                        <div class="col-sm-3">
+                                          <select class="form-control mb-4" id="model">
+                                            <option selected>Pilih Model Villa</option>
+                                            <option value="Tema Jawa">Tema Jawa</option>
+                                            <option value="Standar">Standar</option>
+                                            <option value="Romantis">Romantis</option>
+                                          </select>
+                                        </div>
+                                  </div>
+                                    <div class="form-group row ">
+                                        <label for="jumlahh" class="col-sm-2 col-form-label">Jumlah Pelanggan</label>
+                                        <div class="col-sm-4">
+                                          <input type="number" class="form-control" id="jumlah" placeholder="Masukkan Jumlah Pemesanan" style="width: 350px;">
+                                        </div>
+                                    </div>
+                                    <form name="hitung diskon" method="POST">
+                                    <div class="form-group row ">
+                                        <label for="totall" class="col-sm-2 col-form-label">Total</label>
+                                        <div class="col-sm-4">
+                                          <input type="number" class="form-control" id="total" name="total" placeholder="Masukkan Total" style="width: 350px;">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row ">
+                                        <label for="dibayarr" class="col-sm-2 col-form-label">Dibayar</label>
+                                        <div class="col-sm-4">
+                                          <input type="number" class="form-control" id="dibayar" name="dibayar" placeholder="Masukkan Nominal Uang" style="width: 350px;">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group row mt-3">
+                                        <label for="tanggall" class="col-sm-2 col-form-label">Tanggal Menyewa</label>
+                                        <div class="col-sm-4">
+                                          <input type="date" class="form-control" id="tanggal" name="tanggal" style="width: 350px;">
+                                        </div>
+                                    </div>
+                                    </form>
+                                    <button type="button" class="btn btn-outline-success" style="margin-left: 125px; margin-top: 20px;" onclick="add()">Simpan</button>
+                                  </div>
+                                </table>
+                            </div>
+                          </div>
+                        </div><br><br>
+
+                        <br id="Hasil">
+            <table class="table table-sm rounded shadow-sm" style="width: 750px; float: right; margin-right: 30px; text-align: center;">
+                <thead>
+                  <tr class="bg-dark text-white">
+                    <th scope="col">No</th>
+                    <th scope="col">Nama Pelanggan</th>
+                    <th scope="col">Model Villa</th>
+                    <th scope="col">Jumlah Pelanggan</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Dibayar</th>
+                    <th scope="col">Tanggal Menyewa</th>
+                    <th scope="col">Modify</th>
+                  </tr>
+                </thead>
+                <tbody id="tampildata">
+                 
+                </tbody>
+              </table>
+
+              <script>
+                function combo() {
+                    var kode = (document.forminput.inputkode.value);
+                    var model = "";
+                    var harga = 0.0;
+        
+                    if (kode == "eda13") {
+                        model = "Tema Jawa";
+                        harga = 1700000;
+                    } else if (kode == "eda14") {
+                        model = "Standar";
+                        harga = 1300000;
+                    } else if (kode == "eda15") {
+                        model = "Romantis";
+                        harga = 2000000;
+                    } else {
+                        model = "";
+                        harga = 0;
+                    }
+        
+                    document.forminput.inputmodel.value = model;
+                    document.forminput.inputharga.value = eval(harga);
+                }
+        
+                function hitungtotal() {
+                    var harga = (document.forminput.inputharga.value);
+                    var jumlah = (document.forminput.inputjumlah.value);
+                    var total = 0.0;
+        
+                    total = harga * jumlah;
+        
+                    var hargaBdiskon= total;
+                    var diskoon1= 50;
+                    var diskon2 =100;
+                    var diskonnya = total/diskon2*diskoon1;
+                    var hargaUdiskon = hargaBdiskon-diskonnya
+        
+                    total=hargaUdiskon
+        
+                    document.forminput.inputtotal.value = eval(total);
+                }
+        
+                function hitungsisauang() {
+                    var total = (document.forminput.inputtotal.value);
+                    var uangbayar = (document.forminput.inputbayar.value);
+                    var sisauang = 0.0;
+        
+                    sisauang = uangbayar - total;
+        
+                    document.forminput.inputsisauang.value = eval(sisauang);
+                }
+        
+                function simpan() {
+                    document.forminput.onama.value = document.forminput.inputnama.value;
+                    document.forminput.omodel.value = document.forminput.inputmodel.value;
+                    document.forminput.ojumlah.value = document.forminput.inputjumlah.value;
+                    document.forminput.ototal.value = document.forminput.inputtotal.value;
+                    document.forminput.odibayar.value = document.forminput.inputbayar.value;
+                    document.forminput.osisauang.value = document.forminput.inputsisauang.value;
+                }
+
+                    var nama = []
+                    var model = []
+                    var jumlah = []
+                    var total = []
+                    var dibayar = []
+                    var tanggal = []
+
+                    var tampil = document.getElementById('tampildata')
+
+                function showData() {
+                tampil.innerHTML = ""
+
+                for(i = 0;i<nama.length;i++){
+                    var nodata = i+1
+
+              
+
+                
+
+                tampil.innerHTML += "<tr>"+
+                  "<th>"+nodata+"</th>"+
+                  "<td>"+nama[i]+"</td>"+
+                  "<td>"+model[i]+"</td>"+
+                  "<td>"+jumlah[i]+"</td>"+
+                  "<td>"+total[i]+"</td>"+
+                  "<td>"+dibayar[i]+"</td>"+
+                  "<td>"+tanggal[i]+"</td>"+
+                  "<td>"+
+                    "<button class='btn btn-danger' href='#' onclick='hapus("+i+")' type='button'>Delete</button>"+
+                  "</td>"+
+                "</tr>"
+                  }
+                }
+                showData()
+
+                function add() {
+                  var namabaru = document.getElementById('nama').value
+                  var modelbaru = document.getElementById('model').value
+                  var jumlahbaru = document.getElementById('jumlah').value
+                  var totalbaru = document.getElementById('total').value
+                  var dibayarbaru = document.getElementById('dibayar').value
+                  var tanggalbaru = document.getElementById('tanggal').value
+
+                  nama.push(namabaru)
+                  model.push(modelbaru)
+                  jumlah.push(jumlahbaru)
+                  total.push(totalbaru)
+                  dibayar.push(dibayarbaru)
+                  tanggal.push(tanggalbaru)
+
+                showData()
+
+                }
+
+                function hapus(drop) {
+                  var namahapus = nama.splice(drop,1);
+                  var modelhapus = model.splice(drop,1);
+                  var jumlahhapus = jumlah.splice(drop,1);
+                  var totalhapus = total.splice(drop,1);
+                  var dibayarhapus = dibayar.splice(drop,1);
+                  var tanggalhapus = tanggal.splice(drop,1);
+
+                showData()
+
+                }
+              </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
 </html>
