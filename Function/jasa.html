@@ -6,32 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <title>Villa Surga</title>
+    <style>
+      header h1 {
+        float: right;
+	      padding:0px 0;	
+	      color: #148F77;
+      }   
+    </style>
   </head>
   <body>
-    <!-- navbar nya -->
+    <!-- Navbar -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <header>
+          <div class="container">
+              <h1><a>Villa Surga</a></h1>
+          </div>
+      </header>
         <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#header">Home <span class="sr-only">(current)</span></a>    
+          <li class="nav-hitam active">
+            <a class="nav-link" href="#header">Home</a>    
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Form">Pemesanan</a>
+          <li class="nav-hitam active">
+            <a class="nav-link" href="#fasilitas">Fasilitas</a>
           </li> 
-          <li class="nav-item">
-            <a class="nav-link" href="#Hasil">Transaksi</a>
-          </li> 
+          <li class="nav-hitam active">
+            <a class="nav-link" href="#Form1">Pemesanan</a>
+          </li>
+          <li class="nav-hitam active">
+            <a class="nav-link" href="#Form2">Transaksi</a>
+          </li>  
         </ul>
       </div>
     </nav>
 
-  <!-- carousel nya -->
+  <!-- Carousel -->
   <br id="header">
   <div id="carouselExampleCaptions" class="carousel slide " data-ride="carousel">
     <ol class="carousel-indicators">
@@ -67,14 +83,41 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
+    <br id="fasilitas">
+  </div>
+  
+
+
+  <!--Card Fasilitas-->
+  <div class="container card bg-transparant mb-3 shadow" style="width: 700px; margin-center; float: center;">
+    <div class="card-header text-white" style="text-align: center; background-color: #148F77; font-family: fantasy;"><h3> Promo Diskon 50% <br><br> Fasilitas</h3>
+    <div class="card-body">
+      <div class="card-group shadow-sm">
+        <div class="card rounded" style="margin-right: 30px; margin-top: 20px; width: 30%; height: 200;">
+          <img src="data:image/png;base64,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" height="150px" class="card-img-top" alt="Gambar">
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: center;">WIFI</h5>
+          </div>
+        </div>
+        <div class="card rounded" style="margin-top: 20px; width: 30%; height: 200;">
+          <img src="data:image/png;base64,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" height="150px" class="card-img-top" alt="Gambar">
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: center;">Kolam Renang</h5>
+          </div>
+        </div>
+        <div class="card rounded" style="margin-left: 30px; margin-top: 20px; width: 30%; height: 200;">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSdbQEqtJyyHEpVKLwRsZuiRF9yMbZR8Uqt2A&usqp=CAU" height="150px"  class="card-img-top" alt="Gambar">
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: center;">AC</h5>
+            <br id="Form1">
+        </div>
+        </div>
+      </div>
+    </div>
+    </div>
   </div>
   
   <br id="Form">
-  <div class="p-3 mb-3 bg-secondary text-white shadow-sm">
-      <h5 class="display-4" style="text-align: center; Cochin, Georgia, Times, font-family: Cambria, 'Times New Roman', serif;">Villa Surga</h5>
-    </div>
-  <br><br>
-
   <div class="container">
       <form name="forminput">
           <div class="form-group">
@@ -212,6 +255,8 @@
                       </div>
                   </div>
 
+
+                  <!-- Form Konfirmasi-->
                   <div class="col-sm">
                     <div class="card text-white">
                         <h5 class="card-header bg-dark"><center>Form Konfirmasi</center></h5>
@@ -262,21 +307,85 @@
                                         </div>
                                     </div>
                                     </form>
-                                    <button type="button" class="btn btn-outline-success" style="margin-left: 125px; margin-top: 20px;" onclick="add()">Simpan</button>
+                                    <button type="button" class="btn btn-outline-success" style="margin-left: 125px; margin-top: 20px;" onclick="add()">Booking</button>
                                   </div>
                                 </table>
                             </div>
                           </div>
                         </div><br><br>
+                        <br id="Form2">
 
-                        <br id="Hasil">
-            <table class="table table-sm rounded shadow-sm" style="width: 750px; float: right; margin-right: 30px; text-align: center;">
-                <thead>
+        <!--Form Edit-->
+        <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header text-white" style="background-color: black;">
+                <h4 class="modal-title" id="exampleModalLabel">Masukkan data baru</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body rounded">
+                  <div class="form-group row ">
+                    <label for="inamaa" class="col-sm-2 col-form-label">Nama Pelanggan</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" id="inama" placeholder="Masukkan Nama" style="width: 350px;">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                  <label for="imodell" class="col-sm-2 col-form-label">Model Villa</label>
+                  <div class="col-sm-4">
+                  <select class="form-control" id="imodel" name="imodel" style="width: 350px;">
+                    <option selected>Pilih</option>
+                    <option value="Tema Jawa">Tema Jawa</option>
+                    <option value="Standar">Standar</option>
+                    <option value="Romantis">Romantis</option>
+                  </select>
+                  </div>
+                  </div>
+                  <div class="form-group row ">
+                    <label for="ijumlahh" class="col-sm-2 col-form-label">Jumlah Pemesanan</label>
+                    <div class="col-sm-4">
+                      <input type="number" class="form-control" id="ijumlah" placeholder="Masukkan Jumlah" style="width: 350px;">
+                    </div>
+                  </div>
+                  <div class="form-group row ">
+                    <label for="itotall" class="col-sm-2 col-form-label">Total</label>
+                    <div class="col-sm-4">
+                      <input type="number" class="form-control" id="itotal" placeholder="Masukkan Total" style="width: 350px;">
+                    </div>
+                  </div>
+                  <div class="form-group row ">
+                    <label for="idibayarr" class="col-sm-2 col-form-label">Dibayar</label>
+                    <div class="col-sm-4">
+                      <input type="number" class="form-control" id="idibayar" placeholder="Masukkan Nominal" style="width: 350px;">
+                    </div>
+                  </div>
+                  <div class="form-group row ">
+                    <label for="itanggall" class="col-sm-2 col-form-label">Tanggal Pemesanan</label>
+                    <div class="col-sm-4">
+                      <input type="date" class="form-control" id="itanggal" style="width: 350px;">
+                    </div>
+                  </div>
+                
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-success" onclick="saveData()" data-dismiss="modal">Ubah</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>  
+
+            <br id="Hasil">
+            <div class="container rounded" style="width: 100%; text-align: center;" > 
+              <table class="table table-bordered mt-4" >
+                <thead class="table-dark">
                   <tr class="bg-dark text-white">
                     <th scope="col">No</th>
                     <th scope="col">Nama Pelanggan</th>
                     <th scope="col">Model Villa</th>
-                    <th scope="col">Jumlah Pelanggan</th>
+                    <th scope="col">Jumlah Penyewaan</th>
                     <th scope="col">Total</th>
                     <th scope="col">Dibayar</th>
                     <th scope="col">Tanggal Menyewa</th>
@@ -287,7 +396,10 @@
                  
                 </tbody>
               </table>
+            </div>
 
+
+            <!-- Javascript -->
               <script>
                 function combo() {
                     var kode = (document.forminput.inputkode.value);
@@ -377,7 +489,8 @@
                   "<td>"+dibayar[i]+"</td>"+
                   "<td>"+tanggal[i]+"</td>"+
                   "<td>"+
-                    "<button class='btn btn-danger' href='#' onclick='hapus("+i+")' type='button'>Delete</button>"+
+                  "<button class='btn btn-outline-warning' data-toggle='modal' data-target='#modal' onclick='update("+i+")' type='button'>Update</button>"+
+                  "<button class='btn btn-outline-danger' href='#' onclick='hapus("+i+")' type='button'>Delete</button>"+
                   "</td>"+
                 "</tr>"
                   }
@@ -414,12 +527,53 @@
                 showData()
 
                 }
+
+                 var index = []
+
+          function update(i) {
+            document.getElementById('inama').value = nama[i]
+            document.getElementById('imodel').value = model[i]
+            document.getElementById('ijumlah').value = jumlah[i]
+            document.getElementById('itotal').value = total[i]
+            document.getElementById('idibayar').value = dibayar[i]
+            document.getElementById('itanggal').value = tanggal[i]
+            
+
+
+            index.push(i)
+          }
+
+          function saveData() {
+            var simpannama = document.getElementById('inama').value
+            var simpanmodel = document.getElementById('imodel').value
+            var simpanjumlah = document.getElementById('ijumlah').value
+            var simpantotal = document.getElementById('itotal').value
+            var simpandibayar = document.getElementById('idibayar').value
+            var simpantanggal = document.getElementById('itanggal').value
+            
+
+            nama[index] = simpannama
+            model[index] = simpanmodel
+            jumlah[index] = simpanjumlah
+            total[index] = simpantotal
+            dibayar[index] = simpandibayar
+            tanggal[index] = simpantanggal
+            
+            
+            
+            showData()
+            index.pop()
+          }
+
               </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" 
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" 
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   </body>
 </html>
